@@ -11,9 +11,7 @@ export default function Letras(props) {
       clicado, setClicado,
       underLine, setUnderLine,
       venceu, setVenceu,
-      fimdeJogo, setFimdeJogo,
-      tentativa, setTentativa,
-      criarInput, setCriarInput } = props
+      fimdeJogo, setFimdeJogo} = props
 
 
    const underLine2 = [...underLine]
@@ -47,9 +45,7 @@ export default function Letras(props) {
          setClicado([...clicado, palavraMinuscula])
       }
 
-      //for (let i=0; i<arrayPalavra.length; i++) {
-      //   if (palavraMinuscula === arrayPalavra[i]) {
-      //}
+    
       if (underLine.length === acertou) {
          setPalavraEscolhida("")
          setClicado("")
@@ -70,7 +66,7 @@ export default function Letras(props) {
 
          <ul>
             {alfabeto.map(clicou => (<button disabled={!palavraEscolhida ? true : false || clicado.includes(clicou) ? true : false}
-               onClick={() => teclado(clicou)} className={!palavraEscolhida || clicado.includes(clicou) ? "teclado bloqueado" : "teclado liberado"}> {clicou.toUpperCase()} </button>))}
+               data-test="letter" onClick={() => teclado(clicou)} className={!palavraEscolhida || clicado.includes(clicou) ? "teclado bloqueado" : "teclado liberado"}> {clicou.toUpperCase()} </button>))}
          
         
          </ul>

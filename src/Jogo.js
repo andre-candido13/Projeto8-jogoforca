@@ -40,8 +40,8 @@ export default function Jogo(props) {
         <>
             <div className="corpo">
 
-                <img src={`./img/forca${erradas}.png`} alt="figura-forca" />
-                <button onClick={escolhaPalavra} className="escolher"> Escolher Palavra </button>
+                <img data-test="game-image" src={`./img/forca${erradas}.png`} alt="figura-forca" />
+                <button data-test="choose-word" onClick={escolhaPalavra} className="escolher"> Escolher Palavra </button>
 
             </div>
 

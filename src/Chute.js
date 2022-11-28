@@ -36,11 +36,11 @@ export default function Chute(props) {
     return (
         
         <span className="shoot">
-            <strong> Já sei a resposta! </strong>
+            <strong> Já sei a palavra! </strong>
 
-            <input disabled={criarInput} type="text"onChange={(e)=>setTentativa(e.target.value)} value={tentativa}></input> 
+            <input data-test="guess-input" disabled={criarInput} type="text"onChange={(e)=>setTentativa(e.target.value)} value={tentativa}></input> 
 
-            <button className="estilizar" onClick={shoot}> Chutar </button>
+            <button data-test="guess-button" className="estilizar" onClick={shoot}> Chutar </button>
         </span>
     )
 }
