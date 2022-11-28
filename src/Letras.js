@@ -65,8 +65,8 @@ export default function Letras(props) {
    return (
 
          <ul>
-            {alfabeto.map(clicou => (<button disabled={!palavraEscolhida ? true : false || clicado.includes(clicou) ? true : false}
-               data-test="letter" onClick={() => teclado(clicou)} className={!palavraEscolhida || clicado.includes(clicou) ? "teclado bloqueado" : "teclado liberado"}> {clicou.toUpperCase()} </button>))}
+            {alfabeto.map(clicou => (<button data-test="letter" disabled={!palavraEscolhida ? true : false || clicado.includes(clicou) ? true : false}
+             onClick={() => teclado(clicou)} className={!palavraEscolhida || clicado.includes(clicou) ? "teclado bloqueado" : "teclado liberado"}> {clicou.toUpperCase()} </button>))}
          
         
          </ul>

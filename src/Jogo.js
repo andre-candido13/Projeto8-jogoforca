@@ -45,7 +45,7 @@ export default function Jogo(props) {
 
             </div>
 
-            <div className={fimdeJogo===false? "estiliza":"estiliza derrota"}>
+            <div data-test="word" data-answer={palavraEscolhida} className={fimdeJogo===false? "estiliza":"estiliza derrota"}>
                 {underLine.map (e=> (<span className={venceu===false?"underline": "underline ganhou"}>{e}</span>))}
             </div>
 
